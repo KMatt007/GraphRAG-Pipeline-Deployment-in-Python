@@ -11,7 +11,7 @@ This project presents a streamlined implementation of a **Graph Retrieval-Augmen
 
 ## Model Used
 
-The model used in this project is [`TinyLlama/TinyLlama-1.1B-Chat-v1.0`](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0), created by **Okon Prince**. This model is a small, efficient transformer-based language model designed for use on low-resource machines.
+The model used in this project is [`TinyLlama/TinyLlama-1.1B-Chat-v1.0`](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0), and it was trained for this project by **Okon Prince**. This model is a small, efficient transformer-based language model designed for use on low-resource machines.
 
 ### Why TinyLlama?
 
