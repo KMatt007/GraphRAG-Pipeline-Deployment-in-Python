@@ -76,7 +76,7 @@ Make sure to load this environment variable before running the notebook. The `do
 
 Please ensure you comply with the individual licenses of all libraries and models used in this project.
 
-## Future Improvements
+## Possible Future Improvements
 
 - Integrate an external graph database (e.g., Neo4j or Weaviate) for scalable knowledge graph management.
 - Support additional file types such as PDF, Word, or HTML using parsers like PyMuPDF or BeautifulSoup.
