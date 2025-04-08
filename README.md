@@ -36,7 +36,7 @@ pip install langchain openai gradio networkx sentence-transformers python-dotenv
 
 ## Optional Dependencies
 
-```bash
+
 pip install faiss-cpu            # For faster vector similarity search (if FAISS is used)
 pip install huggingface_hub      # For accessing models from Hugging Face
 
