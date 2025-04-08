@@ -88,5 +88,5 @@ Please ensure you comply with the individual licenses of all libraries and model
 
 **Okon Prince**  
 Data Scientist and AI Researcher  
-Creator of the Simple Cyber-Security Query Assistant  
+Developer; Simple Cyber-Security Query Assistant  
 Specialized in AI applications for cybersecurity, environmental intelligence, and education.
