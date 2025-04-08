@@ -1,6 +1,6 @@
 # The Simple Cyber-Security Query Assistant
 
-###**A Simple GraphRAG Pipeline for answering cyber security related queries in Python**
+### **A Simple GraphRAG Pipeline for answering cyber security related queries in Python**
 
 This project presents a streamlined implementation of a **Graph Retrieval-Augmented Generation (GraphRAG)** pipeline using Python. It is designed to construct knowledge graphs from text documents and use them to enhance the context-awareness of language models during response generation. The system integrates document parsing, chunking, semantic embeddings, and graph construction, and it provides an interactive interface for querying via Gradio.
 
