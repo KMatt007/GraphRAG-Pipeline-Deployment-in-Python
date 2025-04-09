@@ -1,19 +1,20 @@
 # The Simple Cyber-Security Query Assistant
 
-### **A Simple GraphRAG Pipeline for answering cyber security related queries in Python**
+### **A Simple AI-Powered Cyber-Security Query Assistant in Python**
 
-This project presents a streamlined implementation of a **Graph Retrieval-Augmented Generation (GraphRAG)** pipeline using Python. It is designed to construct knowledge graphs from text documents and use them to enhance the context-awareness of language models during response generation. The system integrates document parsing, chunking, semantic embeddings, and graph construction, and it provides an interactive interface for querying via Gradio.
+This project presents an implementation of an interactive system designed to answer cybersecurity-related queries using a fine-tuned language model. The system integrates document parsing, chunking, semantic embeddings, and model fine-tuning to provide contextually relevant and accurate responses. 
+
+The system uses a lightweight transformer-based model to ensure fast deployment and experimentation. It also provides an interactive interface using **ipywidgets** for easy exploration.
 
 ## Project Objective
 
-- Convert input text into a knowledge graph.
-- Retrieve relevant information from the graph using semantic search.
-- Use a fine-tuned language model to generate informed answers.
-- Provide an easy-to-use interface for practical exploration and use.
+- Fine-tune a pre-trained language model on cybersecurity-related text data.
+- Enable querying of the fine-tuned model to generate relevant answers.
+- Provide an easy-to-use interface for practical exploration of the model's capabilities.
 
 ## Model Used
 
-The model used in this project is [`TinyLlama/TinyLlama-1.1B-Chat-v1.0`](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0), and it was trained for this project by **Okon Prince**. This model is a small, efficient transformer-based language model designed for use on low-resource machines.
+The model used in this project is [`TinyLlama/TinyLlama-1.1B-Chat-v1.0`](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0), a small and efficient transformer-based model. It is fine-tuned to respond effectively to cybersecurity-related queries.
 
 ### Why TinyLlama?
 
@@ -23,58 +24,61 @@ The model used in this project is [`TinyLlama/TinyLlama-1.1B-Chat-v1.0`](https:/
 
 ### Domain Specialization
 
-This model was trained using the `zeroshot/cybersecurity-corpus`, which makes it highly relevant for answering cybersecurity-related questions. The training goal was to make the model context-aware and capable of generating accurate responses in cybersecurity environments. This makes it ideal for enterprise systems, security analysts, and educational use cases within the cybersecurity domain.
+This model was fine-tuned using the `zeroshot/cybersecurity-corpus`, which provides a specialized dataset for cybersecurity topics. The fine-tuning process makes the model capable of understanding and answering questions related to cybersecurity, ideal for security analysts, enterprise systems, and educational applications.
 
 ## Dataset
 
-This implementation is designed to work with any corpus of text documents, including `.txt` files. The documents are split into chunks, embedded, and used to build a semantic knowledge graph that enhances the model’s ability to retrieve and generate accurate information.
+This implementation is designed to work with a corpus of text documents related to cybersecurity. The dataset is split into chunks, embedded, and used to fine-tune the language model. While the current dataset used is the `zeroshot/cybersecurity-corpus`, it is flexible and can be adapted to other related datasets.
 
 ## Installation
 
 To get started, install the required dependencies:
 
-`pip install langchain openai gradio networkx sentence-transformers python-dotenv transformers accelerate tqdm matplotlib`
+```bash
+pip install langchain openai gradio networkx sentence-transformers python-dotenv transformers accelerate tqdm matplotlib
 
 ## Optional Dependencies
 
 For additional functionality, install:
 
-`pip install faiss-cpu`
-`pip install huggingface_hub`
+```bash
+pip install faiss-cpu
+pip install huggingface_hub
 
 ## API Key Configuration
 
 If you are using OpenAI services for embeddings or language models, create a `.env` file in your project root directory with the following content:
-`OPENAI_API_KEY=your_openai_api_key_here`
 
-Make sure to load this environment variable before running the notebook. The `dotenv` package ensures secure access to API keys.
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
 
 ## How to Run
 
-- Clone this repository or download the notebook.
-- Install all dependencies listed above.
-- Set up your `.env` file with API keys if applicable.
-- Run the notebook step-by-step in a Jupyter environment.
-- Launch the Gradio interface to interact with the GraphRAG system.
+1. Clone this repository or download the notebook.
+2. Install all dependencies listed above.
+3. Set up your `.env` file with API keys if applicable.
+4. Run the notebook step-by-step in a Jupyter environment.
+5. Interact with the model via the ipywidgets interface for answering cybersecurity queries.
+
 
 ## Key Libraries and Tools
 
-| Library/Tool             | Description                                                              |
-|--------------------------|--------------------------------------------------------------------------|
-| **LangChain**            | Framework for building LLM applications                                  |
-| **OpenAI / HuggingFace** | For accessing and running LLMs and embeddings                            |
-| **Sentence-Transformers**| Alternative to OpenAI embeddings for local use                           |
-| **NetworkX**             | Graph construction and visualization                                     |
-| **Gradio**               | Lightweight UI framework for ML apps                                     |
-| **Transformers**         | For loading and using the TinyLlama model                                |
-| **FAISS (optional)**     | Fast Approximate Nearest Neighbor search                                 |
-| **dotenv**               | For securely loading API keys                                            |
+| Library/Tool           | Description                                                         |
+|------------------------|---------------------------------------------------------------------|
+| **TinyLlama**          | Pre-trained transformer model fine-tuned for cybersecurity queries  |
+| **OpenAI / HuggingFace**| For loading and fine-tuning the TinyLlama model                     |
+| **Sentence-Transformers**| Alternative for local embedding generation                           |
+| **ipywidgets**         | Interactive widgets for building a user interface in Jupyter notebooks |
+| **Gradio**             | UI framework (optional) for creating a user-friendly interface      |
+| **Transformers**       | For loading and using the TinyLlama model                           |
+| **FAISS (optional)**   | Fast Approximate Nearest Neighbor search (for future integration)   |
+| **dotenv**             | For securely loading API keys                                      |
 
 
 ## Model License
 
 - **Model License**: Apache License 2.0  
-- **Frameworks and Dependencies**: Open-source (MIT/BSD/Apache licenses)
+- **Frameworks and Dependencies**: Open-source (MIT/BSD/Apache licenses)  
 
 Please ensure you comply with the individual licenses of all libraries and models used in this project.
 
@@ -82,9 +86,8 @@ Please ensure you comply with the individual licenses of all libraries and model
 
 - Integrate an external graph database (e.g., Neo4j or Weaviate) for scalable knowledge graph management.
 - Support additional file types such as PDF, Word, or HTML using parsers like PyMuPDF or BeautifulSoup.
-- Add authentication and logging capabilities to the Gradio interface.
-- Incorporate semantic reranking to improve retrieval relevance.
-- Extend model functionality using fine-tuned adapters for other specialized domains.
+- Enhance the querying system with vector databases like FAISS for more efficient search.
+- Expand the model's domain-specific knowledge by fine-tuning with additional datasets.
 
 ## Author
 
