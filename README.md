@@ -37,7 +37,7 @@ By combining graph-based querying with vector similarity search, this pipeline p
    cd graphrag-pipeline
    ```
 2. Create a virtual environment and install dependencies:
-   ```python -m venv venv
+   ```bash
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
    ```
