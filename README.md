@@ -49,9 +49,26 @@ By combining graph-based querying with vector similarity search, this pipeline p
    Copy the .env.example file to .env
    Update the Neo4j connection details in the .env file
    ```
-##Usage
-###Data Ingestion
+## Usage
+
+### Data Ingestion
 Process documents and build both vector embeddings and knowledge graph:
+```bash
+python ingest.py --data-dir /path/to/your/documents
+```
+## Querying the System
+Run queries against the combined GraphRAG system:
+```bash
+python query.py --query "Your natural language query here"
+```
+
+## Advanced Usage
+For more detailed control over the retrieval process:
+```bash
+python query.py --query "Your query" --graph-weight 0.7 --vector-weight 0.3 --top-k 5
+```
+
+
 
 ## Author
 
