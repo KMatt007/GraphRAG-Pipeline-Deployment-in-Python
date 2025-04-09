@@ -36,6 +36,7 @@ To get started, install the required dependencies:
 
 ```bash
 pip install langchain openai gradio networkx sentence-transformers python-dotenv transformers accelerate tqdm matplotlib
+```
 
 ## Optional Dependencies
 
@@ -44,6 +45,7 @@ For additional functionality, install:
 ```bash
 pip install faiss-cpu
 pip install huggingface_hub
+```
 
 ## API Key Configuration
 
@@ -51,7 +53,7 @@ If you are using OpenAI services for embeddings or language models, create a `.e
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
-
+```
 ## How to Run
 
 1. Clone this repository or download the notebook.
