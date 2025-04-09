@@ -118,6 +118,24 @@ Edit config.py to customize:
 - Embedding model selection
 - Neo4j connection parameters
 - Retrieval weights and settings
+
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/amazing-feature)
+3. Commit your changes (git commit -m 'Add some amazing feature')
+4. Push to the branch (git push origin feature/amazing-feature)
+4. Open a Pull Request
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+-   [Neo4j](https://neo4j.com/) for graph database technology.
+-   [FAISS](https://github.com/facebookresearch/faiss) for efficient similarity search.
+-   [LangChain](https://github.com/langchain-ai/langchain) for inspiration on RAG architecture.
     
 ## Author
 
