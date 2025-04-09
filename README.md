@@ -89,6 +89,7 @@ The system consists of three main components:
 4. Results are combined, ranked and returned
 
 ## File Structure
+```text
 ├── README.md
 ├── requirements.txt
 ├── .env.example
@@ -107,6 +108,8 @@ The system consists of three main components:
     ├── test_vector_store.py
     ├── test_knowledge_graph.py
     └── test_retrieval.py
+```
+
 
 ## Configuration
 Edit config.py to customize:
