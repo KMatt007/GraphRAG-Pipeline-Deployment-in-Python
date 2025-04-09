@@ -44,6 +44,14 @@ By combining graph-based querying with vector similarity search, this pipeline p
    pip install -r requirements.txt
    ```
 
+3. Configure your Neo4j connection:
+   ```bash
+   Copy the .env.example file to .env
+   Update the Neo4j connection details in the .env file
+   ```
+##Usage
+###Data Ingestion
+Process documents and build both vector embeddings and knowledge graph:
 
 ## Author
 
