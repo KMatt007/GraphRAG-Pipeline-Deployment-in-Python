@@ -68,8 +68,54 @@ For more detailed control over the retrieval process:
 python query.py --query "Your query" --graph-weight 0.7 --vector-weight 0.3 --top-k 5
 ```
 
+##  Architecture
+The system consists of three main components:
+
+**1. Document Processor:** Handles document parsing, chunking, and preprocessing
+**2. Vector Store:** Creates and stores embeddings using FAISS for semantic search
+**3. Knowledge Graph:** Builds and queries a Neo4j graph database for structured information
+**4. Hybrid Retriever:** Combines results from both retrieval methods
+
+## Example Query Flow
+
+1. User submits a question
+2. Question is converted to embedding and relevant query patterns
+3. Parallel retrieval from:
+
+- Neo4j (structured data traversal)
+- Vector DB (semantic similarity)
 
 
+4. Results are combined, ranked and returned
+
+## File Structure
+├── README.md
+├── requirements.txt
+├── .env.example
+├── src/
+│   ├── __init__.py
+│   ├── ingest.py           # Document ingestion pipeline
+│   ├── query.py            # Query interface
+│   ├── vector_store.py     # FAISS vector store implementation
+│   ├── knowledge_graph.py  # Neo4j knowledge graph operations
+│   ├── hybrid_retriever.py # Combined retrieval logic
+│   └── utils.py            # Helper functions
+├── examples/
+│   ├── sample_query.py
+│   └── batch_process.py
+└── tests/
+    ├── test_vector_store.py
+    ├── test_knowledge_graph.py
+    └── test_retrieval.py
+
+## Configuration
+Edit config.py to customize:
+
+- Chunk size for text splitting
+- Embedding model selection
+- Neo4j connection parameters
+- Retrieval weights and settings
+    
 ## Author
 
 **Okon Prince**  
