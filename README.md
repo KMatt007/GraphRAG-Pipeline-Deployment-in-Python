@@ -141,5 +141,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Okon Prince**  
 *Data Scientist and AI Researcher  
-Developer; Simple Cyber-Security Query Assistant  
+Developer; Python GraphRAG Pipeline
 Specialized in AI applications for cybersecurity, environmental intelligence, and education.*
